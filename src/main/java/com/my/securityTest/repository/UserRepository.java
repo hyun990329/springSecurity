@@ -7,4 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     // 아이디가 존재하는지 확인하는 쿼리 메서드
     boolean existsByUsername(String username);
+
+    // username 으로 검색한 결과 리턴
+    UserEntity findByUsername(String username);
 }
